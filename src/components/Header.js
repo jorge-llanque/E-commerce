@@ -9,12 +9,16 @@ export default function Header() {
     <header className="Header">
       <div className="Header__Row1">
         <p>Descubre los beneficios de ser parte Coppel Max</p>
-        <img src="#" alt="imageads"/>
+        <div className="Thumbnail-Image">
+          <img src={Logo} alt="imageads"/>
+        </div>
         <button>Ingresa Ahora</button>
       </div>
       <div className="Header__Row2">
         <div className="Header__Row2-Sideleft">
-          <img src={Logo} alt="logo" />
+          <div className="Thumbnail-Image">
+            <img src={Logo} alt="logo" />
+          </div>
           <div className="Header__Row2-Search">
             <a>Todo el sitio</a>
             <input />

@@ -1,22 +1,48 @@
 @import '../../variables';
 
+@mixin adjustSizeThumbnail($width, $height){
+  width: $width;
+  height: $height;
+}
+
 .Header {
   display: flex;
   flex-direction: column;
   &__Row1{
     background-color: $purple-color;
     display: flex;
+    column-gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     height: auto;
     padding: 10px 0;
     p {
       color: $gray-color;
+    }
+    .Thumbnail-Image {
+      @include adjustSizeThumbnail(120px, 50px )
+    }
+    button {
+      height: 30px;
+      width: 150px;
+      border-radius: 5px;
     }
   }
   &__Row2{
     background-color: $yellow-color;
     display: flex;
     justify-content: space-between;
+    &-Sideleft {
+      display: flex;
+      align-items: center;
+      .Thumbnail-Image {
+        @include adjustSizeThumbnail(150px, 70px)
+      }
+    }
+    &-Sideright>nav>ul{
+      display: flex;
+      
+    }
   }
 }
