@@ -21,7 +21,7 @@
       color: $gray-color;
     }
     .Thumbnail-Image {
-      @include adjustSizeThumbnail(120px, 50px )
+      @include adjustSizeThumbnail(120px, 35px )
     }
     button {
       height: 30px;
@@ -40,9 +40,41 @@
         @include adjustSizeThumbnail(150px, 70px)
       }
     }
-    &-Sideright>nav>ul{
+    &-Sideright>nav {
+      height: 100%;
+      ul{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        li {
+          padding: 14px 10px;
+        }
+      }
+    }
+    &-Search {
+      height: 35px;
+      button {
+        height: 100%;
+        width: 100px;
+      }
+      input {
+        height: 100%;
+      }
+    }
+  }
+  &__Row3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 58px;
+    background-color: $white-color;
+    &-Sideleft{
       display: flex;
-      
+      align-items: center;
+      column-gap: 10px;
+    }
+    &-Sideright{
+      @extend .Header__Row3-Sideleft
     }
   }
 }

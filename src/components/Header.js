@@ -20,9 +20,9 @@ export default function Header() {
             <img src={Logo} alt="logo" />
           </div>
           <div className="Header__Row2-Search">
-            <a>Todo el sitio</a>
+            <button>Todo el sitio</button>
             <input />
-            <a>Buscar</a>
+            <button>Buscar</button>
           </div>
         </div>
         <div className="Header__Row2-Sideright">
@@ -48,9 +48,6 @@ export default function Header() {
           <span>Sigue tus pedidos</span>
           <span>Ayuda</span>
           <span>Theme Color</span>
-        </div>
-        <div className="Hedaer__Row3-Sideright">
-
         </div>
       </div>
     </header>
