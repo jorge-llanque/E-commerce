@@ -1,0 +1,22 @@
+@import '../../variables';
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  &__Row1{
+    background-color: $purple-color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 10px 0;
+    p {
+      color: $gray-color;
+    }
+  }
+  &__Row2{
+    background-color: $yellow-color;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,4 +1,6 @@
 import React from 'react'
+import Logo from '../assets/images/logo.svg'
+import './styles/Header.scss'
 
 export default function Header() {
 
@@ -8,11 +10,16 @@ export default function Header() {
       <div className="Header__Row1">
         <p>Descubre los beneficios de ser parte Coppel Max</p>
         <img src="#" alt="imageads"/>
+        <button>Ingresa Ahora</button>
       </div>
       <div className="Header__Row2">
         <div className="Header__Row2-Sideleft">
-          <img src="#" alt="logo" />
-          <div className="Header__Row2-Search">Search</div>
+          <img src={Logo} alt="logo" />
+          <div className="Header__Row2-Search">
+            <a>Todo el sitio</a>
+            <input />
+            <a>Buscar</a>
+          </div>
         </div>
         <div className="Header__Row2-Sideright">
           <nav>
