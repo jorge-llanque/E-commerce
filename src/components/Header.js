@@ -1,8 +1,15 @@
 import React from 'react'
 import Logo from '../assets/images/logo.svg'
+import {HiMenuAlt1} from 'react-icons/hi'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
+import {IoLocationSharp} from 'react-icons/io5'
+import {AiOutlineSearch} from 'react-icons/ai'
+import {AiOutlineArrowLeft} from 'react-icons/ai'
 import './styles/Header.scss'
 
 export default function Header() {
+
+
 
 
   return (
@@ -16,27 +23,40 @@ export default function Header() {
       </div>
       <div className="Header__Row2">
         <div className="Header__Row2-Sideleft">
+          <i className="Header__Row2-Menuicon"><HiMenuAlt1/></i>
           <div className="Thumbnail-Image">
             <img src={Logo} alt="logo" />
           </div>
-          <div className="Header__Row2-Search">
+        </div>
+        <div className="Header__Row2-Search">
+          <div className="Search__Container-Input">
             <button>Todo el sitio</button>
-            <input />
+            <i><AiOutlineSearch/></i>
+            <input placeholder="Buscar" />
             <button>Buscar</button>
+          </div>
+          <div className="Search__Container-Input2">
+            <i><AiOutlineArrowLeft/></i>
+            <input placeholder="Buscar" />
+            <i><AiOutlineSearch/></i>
           </div>
         </div>
         <div className="Header__Row2-Sideright">
-          <nav>
+          <nav className="Header__Row2-ShorthandAccess">
             <ul>
               <li>Comprar ahora</li>
               <li>Enviar a:</li>
               <li>Inicia sesión</li>
-              <li>Carrito</li>
             </ul>
           </nav>
+          <i className="Header__Row2-Cart"><AiOutlineShoppingCart/></i>
         </div>
       </div>
       <div className="Header__Row3">
+        <div className="Header__Row3-Deliveryform">
+          <i><IoLocationSharp/></i>
+          <span>Ciudad de entrega: IZTAPALAPA, DISTRITO FEDERAL</span>
+        </div>
         <div className="Header__Row3-Sideleft">
           <span>Departamentos</span>
           <span>Ofertas</span>
