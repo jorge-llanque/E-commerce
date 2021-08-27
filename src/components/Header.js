@@ -10,7 +10,7 @@ export default function Header() {
   const [sideBar, setSideBar] = useState(false)
 
   const handleShowSideBar = () => {
-    setSideBar(true)
+    setSideBar(!sideBar)
   }
 
   return (
@@ -25,7 +25,7 @@ export default function Header() {
       <div className="Header__Row2">
         <div className="Header__Row2-Sideleft">
           <i onClick={handleShowSideBar} className="Header__Row2-Menuicon"><HiMenuAlt1/></i>
-          {sideBar && <Navbar />}
+          {sideBar && <Navbar handleShowSideBar={handleShowSideBar} />}
           <div className="Thumbnail-Image">
             <img src={Logo} alt="logo" />
           </div>

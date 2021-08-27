@@ -13,24 +13,31 @@
   width: 100vw;
 }
 .Sidebar__Block1{
-  display: flex;
   align-items: center;
   background-color: $yellow-light-color;
-  padding: 18px;
   column-gap: 15px;
+  display: flex;
+  padding: 18px;
   i {
     font-size: 3.2rem;
   }
   &-Opts {
-    font-size: 1.4rem;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    font-size: 1.4rem;
     row-gap: 10px;
   }
   &-GetIn>a {
     color: #000;
     font-weight: 600;
     margin-right: 15px;
+  }
+  &-Close {
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+    line-height: 100%;
   }
 }
 .Sidebar__Block2 {
@@ -46,22 +53,34 @@
 
 .Sidebar__Block3 {
   .Accordion {
+    border-bottom: 1px solid #c2c2c2;
     display: block;
+    font-size: 1.4rem;
+    padding: 15px;
     width: 100%;
+    li i {
+      transition: all 0.4s ease;
+    }
+    li.open i {
+      transform: rotate(180deg);
+      transition: all 0.4s ease;
+    }
     &__Link {
       cursor: pointer;
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
       position: relative;
-      padding: 10px;
     }
     &__Submenu {
       display: none;
       a {
         display: block;
-        padding: 10px 30px;
+        padding: 10px 20px;
       }
       li {
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid rgb(161, 159, 159);
+
       }
     }
   }

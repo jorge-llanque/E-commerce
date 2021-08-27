@@ -1,12 +1,15 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-expressions */
 import React, { useRef } from 'react'
 import $ from 'jquery'
 import {BsFillPersonFill} from 'react-icons/bs'
+import {IoIosArrowDown} from 'react-icons/io'
+import {AiOutlineClose} from 'react-icons/ai'
 import './styles/Navbar.scss'
 
 
-export default function Navbar() {
+export default function Navbar({handleShowSideBar}) {
 
   const accordionLink = useRef(null);
 
@@ -49,6 +52,7 @@ export default function Navbar() {
             <a href="/">Crear cuenta</a>
           </div>
         </div>
+        <button className="Sidebar__Block1-Close" onClick={handleShowSideBar}><i><AiOutlineClose/></i></button>
       </section>
       <section className="Sidebar__Block2">
         <a href="/">Solicitar Crédito Coppel</a>
@@ -59,7 +63,7 @@ export default function Navbar() {
       <section className="Sidebar__Block3">
         <ul id="accordion" className="Accordion">
           <li>
-            <div className="Accordion__Link" ref={accordionLink}>Departamentos</div>
+            <div className="Accordion__Link" ref={accordionLink}>Departamentos<i><IoIosArrowDown/></i></div>
             <ul className="Accordion__Submenu">
               <li><a href="/">Celulares</a></li>
               <li><a href="/">Electrónica</a></li>
@@ -79,7 +83,7 @@ export default function Navbar() {
             </ul>
           </li>
           <li>
-            <div className="Accordion__Link">Ofertas</div>
+            <div className="Accordion__Link">Ofertas<i><IoIosArrowDown/></i></div>
             <ul className="Accordion__Submenu">
               <li><a href="/">Mejores ofertas</a></li>
               <li><a href="/">Ofertas por categoría</a></li>
@@ -87,14 +91,14 @@ export default function Navbar() {
             </ul>
           </li>
           <li>
-            <div className="Accordion__Link">Exclusivos en línea</div>
+            <div className="Accordion__Link">Exclusivos en línea<i><IoIosArrowDown/></i></div>
             <ul className="Accordion__Submenu">
               <li><a href="/">Exclusivos en línea</a></li>
               <li><a href="/">Exclusivos BanCoppel</a></li>
             </ul>
           </li>
           <li>
-            <div  className="Accordion__Link">Servicios</div>
+            <div  className="Accordion__Link">Servicios<i><IoIosArrowDown/></i></div>
             <ul className="Accordion__Submenu">
               <li><a href="/">Tiempo aire</a></li>
               <li><a href="/">Coppel Pay</a></li>
@@ -115,7 +119,7 @@ export default function Navbar() {
             </ul>
           </li>
           <li>
-            <div>Sigue tus pedidos</div>
+            <div className="Accordion__Link">Sigue tus pedidos</div>
           </li>
         </ul>
       </section>
