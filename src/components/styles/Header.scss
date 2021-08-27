@@ -53,7 +53,7 @@
       align-items: center;
       padding: 10px 0;
       .Thumbnail-Image {
-        @include adjustSizeThumbnail(120px, 20px)
+        @include adjustSizeThumbnail(auto, 20px)
       }
     }
     &-Sideright{
@@ -141,8 +141,13 @@
       align-items: center;
       column-gap: 10px;
       @media screen and (min-width:990px){
+        column-gap: 25px;
         display: flex;
         font-size: 1.4rem;
+        min-height: 30px;
+        i {
+          padding-left: 4px;
+        }
       }
     }
     &-Sideright{

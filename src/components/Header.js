@@ -3,6 +3,7 @@ import Logo from '../assets/images/logo.svg'
 import {HiMenuAlt1} from 'react-icons/hi'
 import {AiOutlineShoppingCart, AiOutlineArrowLeft, AiOutlineSearch} from 'react-icons/ai'
 import {IoLocationSharp} from 'react-icons/io5'
+import {IoIosArrowDown} from 'react-icons/io'
 import Navbar from './Navbar'
 import './styles/Header.scss'
 
@@ -60,10 +61,10 @@ export default function Header() {
           <span>Ciudad de entrega: IZTAPALAPA, DISTRITO FEDERAL</span>
         </div>
         <div className="Header__Row3-Sideleft">
-          <span>Departamentos</span>
-          <span>Ofertas</span>
-          <span>Exclusivos en línea</span>
-          <span>Servicios</span>
+          <span>Departamentos<i><IoIosArrowDown/></i></span>
+          <span>Ofertas<i><IoIosArrowDown/></i></span>
+          <span>Exclusivos en línea<i><IoIosArrowDown/></i></span>
+          <span>Servicios<i><IoIosArrowDown/></i></span>
         </div>
         <div className="Header__Row3-Sideright">
           <span>Ubica tu tienda</span>
