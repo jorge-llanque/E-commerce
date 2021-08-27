@@ -1,9 +1,43 @@
-import React from 'react'
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-expressions */
+import React, { useRef } from 'react'
+import $ from 'jquery'
 import {BsFillPersonFill} from 'react-icons/bs'
 import './styles/Navbar.scss'
 
 
 export default function Navbar() {
+
+  const accordionLink = useRef(null);
+
+  $(function() {
+    var Accordion = function(el, multiple) {
+      this.el = el || {};
+      this.multiple = multiple || false;
+
+      // Variables privadas
+      var links = this.el.find('.Accordion__Link');
+      // Evento
+      links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+    }
+
+    Accordion.prototype.dropdown = function(e) {
+      var $el = e.data.el;
+      var $this = $(this);
+      var $next = $this.next();
+
+      $next.slideToggle();
+      $this.parent().toggleClass('open');
+
+      if (!e.data.multiple) {
+        $el.find('.Accordion__Submenu').not($next).slideUp().parent().removeClass('open');
+      };
+    }	
+
+    var accordion = new Accordion($('#accordion'), false);
+  });
+
+
   return (
     <div className="Navbar__Sidebar">
       <section className="Sidebar__Block1">
@@ -23,11 +57,10 @@ export default function Navbar() {
         <a href="/">Préstamo personal</a>
       </section>
       <section className="Sidebar__Block3">
-        <div>
-          <input type="radio" name="accordion" id="accordionBlock1" className="Accordion__Input"/>
-          <label for="accordionBlock1" className="Accordion__Label">Departamentos</label>
-          <div className="Accordion__Content">
-            <ul>
+        <ul id="accordion" className="Accordion">
+          <li>
+            <div className="Accordion__Link" ref={accordionLink}>Departamentos</div>
+            <ul className="Accordion__Submenu">
               <li><a href="/">Celulares</a></li>
               <li><a href="/">Electrónica</a></li>
               <li><a href="/">Consolas y Videojuegos</a></li>
@@ -44,34 +77,25 @@ export default function Navbar() {
               <li><a href="/">Motos y Automotriz</a></li>
               <li><a href="/">Deportes</a></li>
             </ul>
-          </div>
-        </div>
-        <div>
-          <input type="radio" name="accordion" id="accordionBlock2" className="Accordion__Input"/>
-          <label for="accordionBlock2" className="Accordion__Label">Ofertas</label>
-          <div className="Accordion__Content">
-            <ul>
+          </li>
+          <li>
+            <div className="Accordion__Link">Ofertas</div>
+            <ul className="Accordion__Submenu">
               <li><a href="/">Mejores ofertas</a></li>
               <li><a href="/">Ofertas por categoría</a></li>
               <li><a href="/">Dinero Electrónico</a></li>
             </ul>
-          </div>
-        </div>
-        <div>
-          <input type="radio" name="accordion" id="accordionBlock3" className="Accordion__Input"/>
-          <label for="accordionBlock3" className="Accordion__Label">Exclusivos en línea</label>
-          <div className="Accordion__Content">
-            <ul>
+          </li>
+          <li>
+            <div className="Accordion__Link">Exclusivos en línea</div>
+            <ul className="Accordion__Submenu">
               <li><a href="/">Exclusivos en línea</a></li>
               <li><a href="/">Exclusivos BanCoppel</a></li>
             </ul>
-          </div>
-        </div>
-        <div>
-          <input type="radio" name="accordion" id="accordionBlock4" className="Accordion__Input"/>
-          <label for="accordionBlock4" className="Accordion__Label">Servicios</label>
-          <div className="Accordion__Content">
-            <ul>
+          </li>
+          <li>
+            <div  className="Accordion__Link">Servicios</div>
+            <ul className="Accordion__Submenu">
               <li><a href="/">Tiempo aire</a></li>
               <li><a href="/">Coppel Pay</a></li>
               <li><a href="/">Préstamo personal</a></li>
@@ -89,11 +113,11 @@ export default function Navbar() {
               <li><a href="/">Periódicos y Revistas Coppel</a></li>
               <li><a href="/">Políticas de servicios de remesas</a></li>
             </ul>
-          </div>
-        </div>
-        <div>
-          <label className="Accordion__Label">Sigue tus pedidos</label>
-        </div>
+          </li>
+          <li>
+            <div>Sigue tus pedidos</div>
+          </li>
+        </ul>
       </section>
       <section className="Sidebar__Block4">
         <a href="/">Ubica tu tienda</a>

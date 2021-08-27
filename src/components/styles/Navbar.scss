@@ -43,51 +43,32 @@
     font-size: 1.4rem;
   }
 }
+
 .Sidebar__Block3 {
-  padding: 15px;
-  border-bottom: 1px solid #c2c2c2;
   .Accordion {
-    &__Label {
+    display: block;
+    width: 100%;
+    &__Link {
       cursor: pointer;
       display: block;
-      font-size: 1.4rem;
-      font-weight: 800;
-      padding: 15px 0;
       position: relative;
-      &::after {
-        background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%2300099;" /></svg>');
-        background-size: contain;
-        content: "";
-        height: 6px;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: transform 0.4s;
-        width: 12px;
-      }
+      padding: 10px;
     }
-    &__Content {
+    &__Submenu {
       display: none;
-      font-size: 1.2rem;
-      font-weight: 500;
-      padding: 0 20px;
-      li {
-        padding: 10px 0;
-        border-bottom: 1px solid ;
-      }
-    }
-    &__Input {
-      display: none;
-      &:checked ~ .Accordion__Content {
+      a {
         display: block;
+        padding: 10px 30px;
       }
-      &:checked ~ .Accordion__Label::after {
-        transform: translateY(-50%) rotate(0.5turn);
+      li {
+        border-bottom: 1px solid #000;
       }
     }
-  }  
+  }
+
+
 }
+
 .Sidebar__Block4 {
   @extend .Sidebar__Block2;
   border: none;
