@@ -95,6 +95,13 @@ export default function Navbar() {
           <label className="Accordion__Label">Sigue tus pedidos</label>
         </div>
       </section>
+      <section className="Sidebar__Block4">
+        <a href="/">Ubica tu tienda</a>
+        <a href="/">Preguntas frecuentes</a>
+        <a href="/">Aviso de privacidad</a>
+        <a href="/">Términos y condiciones</a>
+        <a href="/">Tema oscuro</a>
+      </section>
     </div>
   )
 }

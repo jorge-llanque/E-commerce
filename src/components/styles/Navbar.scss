@@ -45,6 +45,7 @@
 }
 .Sidebar__Block3 {
   padding: 15px;
+  border-bottom: 1px solid #c2c2c2;
   .Accordion {
     &__Label {
       cursor: pointer;
@@ -86,4 +87,8 @@
       }
     }
   }  
+}
+.Sidebar__Block4 {
+  @extend .Sidebar__Block2;
+  border: none;
 }
