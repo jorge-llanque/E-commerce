@@ -24,63 +24,75 @@ export default function Navbar() {
       </section>
       <section className="Sidebar__Block3">
         <div>
-          <input type="radio" name="accordion" id="sectionBlock3" className="Accordion__Input"/>
-          <label for="sectionBlock3" className="Accordion__Label">Departamentos</label>
+          <input type="radio" name="accordion" id="accordionBlock1" className="Accordion__Input"/>
+          <label for="accordionBlock1" className="Accordion__Label">Departamentos</label>
           <div className="Accordion__Content">
             <ul>
-              <li>Celulares</li>
-              <li>Electrónica</li>
-              <li>Consolas y Videojuegos</li>
-              <li>Instrumentos Musicales</li>
-              <li>Hogar y Muebles</li>
-              <li>Línea Blanca y Electrodomésticos</li>
-              <li>Zapatos</li>
-              <li>Mujeres</li>
-              <li>Hombres</li>
-              <li>Relojes Lentes y Joyería</li>
-              <li>Perfumes y Cuidado Personal</li>
-              <li>Bebés y Niños</li>
-              <li>Juguetes</li>
-              <li>Motos y Automotriz</li>
-              <li>Deportes</li>
+              <li><a href="/">Celulares</a></li>
+              <li><a href="/">Electrónica</a></li>
+              <li><a href="/">Consolas y Videojuegos</a></li>
+              <li><a href="/">Instrumentos Musicales</a></li>
+              <li><a href="/">Hogar y Muebles</a></li>
+              <li><a href="/">Línea Blanca y Electrodomésticos</a></li>
+              <li><a href="/">Zapatos</a></li>
+              <li><a href="/">Mujeres</a></li>
+              <li><a href="/">Hombres</a></li>
+              <li><a href="/">Relojes Lentes y Joyería</a></li>
+              <li><a href="/">Perfumes y Cuidado Personal</a></li>
+              <li><a href="/">Bebés y Niños</a></li>
+              <li><a href="/">Juguetes</a></li>
+              <li><a href="/">Motos y Automotriz</a></li>
+              <li><a href="/">Deportes</a></li>
             </ul>
           </div>
         </div>
         <div>
-          <input type="radio" name="accordion" id="sectionBlock3" className="Accordion__Input"/>
-          <label for="sectionBlock3" className="Accordion__Label">Ofertas</label>
+          <input type="radio" name="accordion" id="accordionBlock2" className="Accordion__Input"/>
+          <label for="accordionBlock2" className="Accordion__Label">Ofertas</label>
           <div className="Accordion__Content">
             <ul>
-              <li>Mejores ofertas</li>
-              <li>Ofertas por categoría</li>
-              <li>Dinero Electrónico</li>
+              <li><a href="/">Mejores ofertas</a></li>
+              <li><a href="/">Ofertas por categoría</a></li>
+              <li><a href="/">Dinero Electrónico</a></li>
             </ul>
           </div>
         </div>
         <div>
-          <input type="radio" name="accordion" id="sectionBlock3" className="Accordion__Input"/>
-          <label for="sectionBlock3" className="Accordion__Label">Exclusivos en línea</label>
+          <input type="radio" name="accordion" id="accordionBlock3" className="Accordion__Input"/>
+          <label for="accordionBlock3" className="Accordion__Label">Exclusivos en línea</label>
           <div className="Accordion__Content">
             <ul>
-              <li>Exclusivos en línea</li>
-              <li>Exclusivos BanCoppel</li>
+              <li><a href="/">Exclusivos en línea</a></li>
+              <li><a href="/">Exclusivos BanCoppel</a></li>
             </ul>
           </div>
         </div>
         <div>
-          <input type="radio" name="accordion" id="sectionBlock3" className="Accordion__Input"/>
-          <label for="sectionBlock3" className="Accordion__Label">Servicios</label>
+          <input type="radio" name="accordion" id="accordionBlock4" className="Accordion__Input"/>
+          <label for="accordionBlock4" className="Accordion__Label">Servicios</label>
           <div className="Accordion__Content">
             <ul>
-              <li>Tiempo aire</li>
-              <li>Coppel Pay</li>
-              <li>Préstamo personal</li>
-              <li>Club de Protección</li>
-              <li>Coppel viajes</li>
-              <li>Cliente digital</li>
-              <li>Coppel Max</li>
+              <li><a href="/">Tiempo aire</a></li>
+              <li><a href="/">Coppel Pay</a></li>
+              <li><a href="/">Préstamo personal</a></li>
+              <li><a href="/">Club de Protección</a></li>
+              <li><a href="/">Coppel viajes</a></li>
+              <li><a href="/">Cliente digital</a></li>
+              <li><a href="/">Coppel Max</a></li>
+              <li><a href="/">Sorteos y concursos</a></li>
+              <li><a href="/">Periódico Coppel</a></li>
+              <li><a href="/">Starhaus Primavera-Verano</a></li>
+              <li><a href="/">Revista Coppel</a></li>
+              <li><a href="/">Revista Celulares y Computación</a></li>
+              <li><a href="/">Starhaus Colecciones</a></li>
+              <li><a href="/">Mejora tu vida</a></li>
+              <li><a href="/">Periódicos y Revistas Coppel</a></li>
+              <li><a href="/">Políticas de servicios de remesas</a></li>
             </ul>
           </div>
+        </div>
+        <div>
+          <label className="Accordion__Label">Sigue tus pedidos</label>
         </div>
       </section>
     </div>
