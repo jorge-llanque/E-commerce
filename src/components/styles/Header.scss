@@ -141,12 +141,33 @@
       align-items: center;
       column-gap: 10px;
       @media screen and (min-width:990px){
-        column-gap: 25px;
+        cursor: pointer;
         display: flex;
         font-size: 1.4rem;
         min-height: 30px;
         i {
           padding-left: 4px;
+        }
+        ul {
+          column-gap: 25px;
+          display: flex;
+          li {
+            position: relative;
+            display: block;
+            a:hover {
+              background-color: rgb(221, 221, 221);
+            }
+            ul {
+              display: none;
+            }
+            &:hover > ul {
+              display: block;
+              position: absolute;
+              ul {
+                left: 100%;
+              }
+            }
+          }
         }
       }
     }
