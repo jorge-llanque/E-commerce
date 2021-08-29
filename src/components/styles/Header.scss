@@ -42,25 +42,27 @@
     "topleft topright"
     "bottomleftright bottomleftright";
     padding: 5px 10px;
-    @media screen and (min-width:768px){
-      grid-template-columns: 3fr auto;
+    @media screen and (min-width:990px){
+      grid-template-columns: max-content 450px minmax(400px, auto);
       grid-template-areas: "topleft bottomleftright topright";
     }
     &-Sideleft {
-      grid-area: topleft;
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      grid-area: topleft;
       padding: 10px 0;
+      width: fit-content;
       .Thumbnail-Image {
         @include adjustSizeThumbnail(auto, 20px)
       }
     }
     &-Sideright{
-      grid-area: topright;
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      grid-area: topright;
+      justify-content: flex-end;
       nav {
         height: 100%;
         ul{
@@ -74,12 +76,12 @@
       }
     }
     &-Search {
-      grid-area: bottomleftright;
       align-self: flex-end;
       display: flex;
+      grid-area: bottomleftright;
       height: 35px;
-      width: 100%;
       margin: auto 0;
+      min-width: 100%;
       button {
         display: none;
         height: 100%;
@@ -89,15 +91,15 @@
         }
       }
       .Search__Container-Input {
-        background-color: $white-color;
-        height: 100%;
-        width: 100%;
-        border-radius: 5px;
-        display: flex;
         align-items: center;
+        background-color: $white-color;
+        border-radius: 5px;
         column-gap: 5px;
-        padding: 0 10px;
+        display: flex;
         font-size: 1.6rem;
+        height: 100%;
+        justify-content: space-between;
+        min-width: 100%;
       }
       .Search__Container-Input2 {
         @extend .Search__Container-Input;
