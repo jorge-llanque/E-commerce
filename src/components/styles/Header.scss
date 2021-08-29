@@ -156,15 +156,26 @@
           li {
             position: relative;
             display: block;
-            a:hover {
-              background-color: rgb(221, 221, 221);
-            }
             ul {
               display: none;
             }
             &:hover > ul {
+              background-color: $white-color;
               display: block;
               position: absolute;
+              width: max-content;
+              li {
+                height: 35px;
+                line-height: 35px;
+                a {
+                  height: max-content;
+                  padding: 10px;
+                  &:hover {
+                    background-color: $blue-color;
+                    color: $white-color;
+                  }
+                }
+              }
               ul {
                 left: 100%;
               }
