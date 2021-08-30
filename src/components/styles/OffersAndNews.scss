@@ -1,11 +1,28 @@
 .Container__OffersAndNews {
   background-color: khaki;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  column-gap: 20px;
   height: 100%;
   width: 100%;
-  .Carousel {
+  .Offers {
+    background-color: lawngreen;
     width: 100%;
-    max-width: 562px;
+    max-width: 200px;
+  }
+  
+}
+@media screen and (min-width: 768px){
+  .Container__OffersAndNews {
+    grid-template-columns: auto auto;
+    .Offers {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      row-gap: 20px;
+
+      &-Thumbnail {
+        height: max-content;
+      }
+    }
   }
 }
