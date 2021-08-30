@@ -156,6 +156,7 @@
           li {
             position: relative;
             display: block;
+            line-height: 100%;
             ul {
               display: none;
             }
@@ -166,18 +167,24 @@
               width: max-content;
               li {
                 height: 35px;
-                line-height: 35px;
+                line-height: 100%;
                 a {
                   height: max-content;
+                  display: flex;
+                  justify-content:space-between;
                   padding: 10px;
                   &:hover {
                     background-color: $blue-color;
                     color: $white-color;
+                    i {
+                      color: $white-color;
+                    }
                   }
                 }
               }
               ul {
                 left: 100%;
+                top: 0;
               }
             }
           }

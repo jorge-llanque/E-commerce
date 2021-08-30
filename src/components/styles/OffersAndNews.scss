@@ -1,0 +1,11 @@
+.Container__OffersAndNews {
+  background-color: khaki;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  .Carousel {
+    width: 100%;
+    max-width: 562px;
+  }
+}
