@@ -1,14 +1,11 @@
 .Container__OffersAndNews {
   background-color: khaki;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px 100px;
   column-gap: 20px;
   height: 100%;
   width: 100%;
-  .Offers {
-    background-color: lawngreen;
-    width: 100%;
-    max-width: 200px;
-  }
   
 }
 @media screen and (min-width: 768px){

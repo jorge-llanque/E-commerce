@@ -33,14 +33,11 @@ export default function OffersAndNews() {
           }
         </Carousel>
       </div>
-      <div className="Offers">
-        <div className="Offers-Thumbnail">
-          <img src={offers[0]} alt="asd"/>
-        </div>
-        
-        <div className="Offers-Thumbnail">
-          <img src={offers[1]} alt="asd"/>
-        </div>
+      <div className="Offers-Thumbnail">
+        <img src={offers[0]} alt="asd"/>
+      </div>
+      <div className="Offers-Thumbnail">
+        <img src={offers[1]} alt="asd"/>
       </div>
     </div>
   )
