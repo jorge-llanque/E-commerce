@@ -9,8 +9,10 @@ export default function CategoriesCards() {
     <div className="CategoriesCards">
       {
         categories[0].content.map(obj => (
-          <div className="CategoriesCards__Card">{obj.title}
+          <div className="CategoriesCards__Card">
             <img src={obj.icon} alt="swed"/>
+            {obj.title}
+            <span>Hasta {obj.discount}%</span>
           </div>
           
         ))

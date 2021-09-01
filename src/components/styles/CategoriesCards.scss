@@ -3,15 +3,28 @@
 .CategoriesCards {
   background-color: lawngreen;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(85px, 124px));
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   justify-content: center;
-  gap: 15px 20px;
+  gap: 10px;
   width: 100%;
-
   &__Card {
-    min-height: 120px;
-    height: 155px;
+    height: 110px;
     background-color: $white-color;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    img {
+      height: 25px;
+      width: 25px;
+    }
+    span {
+      background-color: $rose-color;
+      padding: 0 10px;
+      border-radius: 15px 4px 15px 4px;
+    }
   }
 }
